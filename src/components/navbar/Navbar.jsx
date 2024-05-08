@@ -3,6 +3,7 @@ import "./navbar.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import logo from "../../assets/logo.svg";
 
+// Menu component for navbar links
 const Menu = () => {
   return (
     <>
@@ -25,7 +26,9 @@ const Menu = () => {
   );
 };
 
+// Navbar component
 const Navbar = () => {
+  // State to toggle the menu
   const [toggleMenu, setToggleMenu] = useState(false);
 
   return (

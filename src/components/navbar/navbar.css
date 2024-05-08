@@ -1,3 +1,4 @@
+/* Apply box-sizing to all elements for easier layout calculations */
 .gpt3__navbar {
     display: flex;
     justify-content: space-between;
@@ -6,7 +7,7 @@
 }
 
 .gpt3__navbar-links{ 
-    flex: 1; 
+    flex: 1; /* Allow the navbar links to grow */
     display: flex;
     justify-content: "flex-start";
     align-items: center;
@@ -22,12 +23,12 @@
 
 .gpt3__navbar-links_container{
     display: flex;
-    -ms-flex-direction: row;
+    flex-direction: row;
 }
 
 .gpt3__navbar-sign{
     display: flex;
-    justify-content: flex;
+    justify-content: flex-end;
     align-items: center;
 }
 .gpt3__navbar-links_container p,
@@ -39,7 +40,7 @@
     font-size: 18px;
     line-height: 25px;
     text-transform: capitalize;
-    margin: 0 1rem;
+    margin: 0 1rem; /* Set margin for the navbar links */
     cursor: pointer;
 }
 
@@ -87,38 +88,44 @@
 }
 
 .gpt3__navbar-menu_container p{
-    margin: 1rem 0; 
+    margin: 1rem 0; /* Set margin for the menu links */
 }
 
 .gpt3__navbar-menu_container-links-sign{
     display: none;
 }
 
+/* Media query for smaller screens */
 @media screen and (max-width: 1050px){
     .gpt3__navbar-links_container{
         display: none;
     }
+    /* Display the menu icon */
     .gpt3__navbar-menu{
         display: flex;
     }
 }
-
+/* Media query for screens less than 700px wide */
 @media screen and (max-width: 700px){
     .gpt3__navbar{
         padding: 2rem 4rem;
     }
 }
 
+/* Media query for screens less than 550px wide */
 @media screen and (max-width: 550px){
     .gpt3__navbar{
         padding: 2rem;
     }
+    /* Hide sign-in section */
     .gpt3__navbar-sign{
         display: none;
     }
+    /* Position the menu container */
     .gpt3__navbar-menu_container{
         top: 20px
     }
+    /* Display sign-in section in menu */
     .gpt3__navbar-menu_container-links-sign{
         display: block;
     }
