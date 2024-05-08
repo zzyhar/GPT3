@@ -1,0 +1,99 @@
+/* Apply box-sizing to all elements for easier layout calculations */
+* {
+    box-sizing: border-box;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    scroll-behavior: smooth; /* Smooth scrolling behavior for the whole page */
+  }
+  
+  /* Set the background color of the body using a custom CSS variable */
+  body {
+    background: var(--color-bg);
+  }
+  
+  /* Remove underline and set text color for links */
+  a {
+    color: unset;
+    text-decoration: none;
+  }
+  
+  /* Create a radial gradient background */
+  .gradient__bg {
+    background: -moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background: -webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background: -o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background: -ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+    background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+  }
+  
+  /* Apply a gradient effect to text */
+  .gradient__text {
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  /* Add padding to sections */
+  .section__padding {
+    padding: 4rem 6rem;
+  }
+  
+  /* Add margin to sections */
+  .section__margin {
+    margin: 4rem 6rem;
+  }
+  
+  /* Apply a scale-up animation to elements */
+  .scale-up-center {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  
+  /* Define the scale-up animation */
+  @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 700px) {
+    /* Adjust padding and margin for smaller screens */
+    .section__padding {
+      padding: 4rem;
+    }
+  
+    .section__margin {
+      margin: 4rem;
+    }
+  }
+  
+  /* Media query for even smaller screens */
+  @media screen and (max-width: 550px) {
+    /* Further adjust padding and margin for even smaller screens */
+    .section__padding {
+      padding: 4rem 2rem;
+    }
+  
+    .section__margin {
+      margin: 4rem 2rem;
+    }
+  }
+  
